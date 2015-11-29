@@ -2,17 +2,17 @@
 layout: post
 title: Walmart.ca E-Commerce Development
 cat: Web Development & Strategy
-img: /img/posts/walmart-progress.png
+img: /img/posts/walmart-progress.jpg
 ---
 <p>Walmart is one of Canada’s largest retailers both brick and mortar stores and their online store Walmart.ca. While employed with Razorfish Toronto, the agency of record for Walmart.ca I worked on several projects for the retailer. Most notably was the addition of threshold shipping, a feature that would show the user how much more they needed to spend until they qualified for free shipping.</p>
 
 <p>I was tasked with developing the component that would work in English and French, be entirely responsive for mobile up, and exist in several different spots of the website. This was primarily achieved through the use of KnockOut.JS custom bindings. I wrote a custom progress bar binding in KnockOut that integrated with the HTML data attributes that would inject the progress information, this bar was then animated from 0 progress to the users current progress every time they increased or decreased their cart’s quantity.</p>
 
-<p class="text-center"><img src="/img/posts/walmart-progress.png" alt="Waltmart Progress" />
+<p class="text-center"><img src="/img/posts/walmart-progress.jpg" alt="Waltmart Progress" />
 
 <p>Once the user has met their threshold they receives a message that they now qualify for free shipping. This messaging is fully accessible to AA standards with all changes in messaging utilizing aria-polite attributes for screen readers.</p>
 
-<p class="text-center"><img src="/img/posts/walmart-finished.png" alt="Walmart Finished" /></p>
+<p class="text-center"><img src="/img/posts/walmart-finished.jpg" alt="Walmart Finished" /></p>
 
 <p>The other most notable work of mine on Walmart.ca was in maintaining the checkout, specifically when introducing threshold shipping and a new design to the checkout page the sidebar box showing all the transaction details needed to be fully dynamic. This is also achieved through the use of KnockOut.JS however this time using custom data bindings to sync the data across the page. All transaction details can change from various actions on the page and are showed during the final step. It was imperative that this information was always accurate and up to date.</p>
 
