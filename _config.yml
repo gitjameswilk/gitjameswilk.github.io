@@ -1,0 +1,12 @@
+# Site settings
+title: James Wilkinson
+email: james@jerw.ca
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "jerw.ca" # the base hostname & protocol for your site
+
+twitter_username: jerw
+linkedin_url: "https://ca.linkedin.com/in/jerwilkinson"
+
+# Build settings
+markdown: kramdown

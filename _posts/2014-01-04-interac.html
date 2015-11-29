@@ -1,0 +1,25 @@
+---
+layout: post
+title: Interac By The Numbers Facebook Contest
+cat: Web Development
+img: /img/posts/interac-like-gate.jpg
+---
+<p>Interac is a long standing client of FUSE MG and was pitched a new and innovative way for persons to visualize the financial impacts of credit card debit and of making only the minimum payment. This application was also used to drive “Like”s to the Interac facebook page.</p>
+
+<p>Users who click on the “By The Numbers” contest tab are first presented with a “Like Gate” if they have not already liked the facebook page, once they have liked the page they are directed to give the application authorization to pull in their birthday, basic profile information and profile picture. This like gate brought 5000+ new users to the facebook page.</p>
+
+<p class="text-center"><img src="/img/posts/interac-like-gate.jpg" alt="" /></p>
+
+<p>With the information received from the authorization process I was then able to customize their experience according to their birthday. We use their birthday as a credit card balance and run an equation on that balance to show them the impacts of making only a minimum payment.</p>
+
+<p>The entire application was developed in PHP using the facebook PHP SDK and some advanced PHP functions. As the application was presented in English and French we utilize server localization to set the way the dollar amounts are to be formatted. When a user selects french the local is set to fr_CA and when they switch back to english to en_US.</p>
+
+<p>The application shows the user how the numbers are calculated. This is all dynamic so someone older or younger would see different numbers. The complex financial equation had to be wrote by hand in php in two parts, one for the initial page calculations, and the second within a loop so the years and total interest paid could be calculated. This large calculation has many failsafes in it for when the minimum payment drops below $10 (a government standard), if the equation causes an infinite loop, and if a malformed age is inserted from the facebook data. These precautions are needed so that the application server doesn’t crash with the load of multiple math equations running simultaneously.</p>
+
+<p>Users then have the option of entering a contest. The contest collects the users information through direct input, this isn’t pre-populated to avoid scaring less tech savvy users and privacy concerned users.</p>
+
+<p class="text-center"><a href="/img/posts/interac-application.jpg"><img src="/img/posts/interac-application.jpg" alt="" /></a></p>
+
+<p>The application was then sent to encrypt the data and develop a backend admin panel to moderate and display the tips in the application.</p>
+
+<p>View the full resolution application by clicking on the image.</p>
