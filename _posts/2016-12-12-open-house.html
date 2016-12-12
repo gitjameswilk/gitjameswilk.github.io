@@ -1,0 +1,25 @@
+---
+layout: post
+title: Open House React Development
+cat: Web Development
+img: /img/posts/openhouse.png
+---
+<p>The Open House is a USA MLS listing service for realtors and home-buyers to get access to unprecedented amounts of data about a home. The Open House integrated with several data point APIs such as yelp, crime database, multiple MLS feeds and more to provide the user with the most information possible about a property.</p>
+
+<p>The Open House website was fully rewritten in React.js with a Redux data flow on the front-end running with Webpack generating client side and server side pages in Node.js. The home page features a large search bar to get started and an instant loading video.</p>
+
+<p class="text-center"><img src="/img/posts/openhouse.png" alt="Filters Page" /></p>
+
+<p>The instant loading video was achieved through my work with Amazon on properly caching the video and the HTML5 Video API to provide proper poster frames that are also heavily cached to provide a seamless loading experience. On mobile, the video is not rendered to save on users data limits, and enhance the mobile experience with a different header.</p>
+
+<p>The search bar was not a single component at the time but was being used in multiple locations. While adding new features to the search bar and updating its design I also turned it into its own self-contained component with corresponding REDUX Actions and Types so that it would work on multiple different pages. The search bar also utilizes React Router to transition the application in a single page state to the next page.</p>
+
+<p>Another major page I worked on for The Open House was the results listing page, specifically the filters. The new results listing page resembles the Airbnb UI and UX but with some major improvements. You will see the search bar has been implemented from the home page, but with a slightly different design, this is achieved through a CSS architecture I implemented when componentizing it so that it can support theming and extending on different pages.</p>
+
+<p class="text-center"><img src="/img/posts/openhouse-2.png" alt="Filters Page" /></p>
+
+<p>The filters view of the results listing is quiet complex, upon changing a filter a REDUX action is fired to update the listings and the map on the other side of the page. These filters range in complexity from simple check boxes to a full on price slider. The price slider is primarily driven by backend data. The filters pane proved tricky to get to work on mobile, tablet, and desktop while maintaining the same user experience, and a focus on using as little javascript as possible.</p>
+
+<p>I developed the entire pane with minimal javascript, utilizing React's internal state I pass the current viewport to determine which set of CSS to use for the pane, and this same state is used by the children components to render slightly differently given the viewport. This allowed me to use pure CSS to style and control the functionality of the site. Meaning there was no need to use a sticky footer javascript library, or a scrolling library to ensure that scroll position when searching through the filters, and filter pagination wasn't destroyed when using the filters.</p>
+
+<p>It's this high attention to detail that I bring to every project, always focusing on the end user's experience with the code that I write, ensuring that it is complete, bug free, and performant on all devices.</p>
